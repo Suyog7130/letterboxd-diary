@@ -3,8 +3,7 @@ main = "src/index.ts"
 compatibility_date = "2023-10-30"
 
 kv_namespaces = [
-  { binding = "letterboxd_diary_cache", id = "ef250fd4f57b4b64990f4f97b8950ed1" },
-  { binding = "referer_log", id = "c9e76638d33940b69d4b6c4e5680c3db" }
+  { binding = "letterboxd_diary_cache", id = "dc2d3d8fed9f403895626aae25deaa43" },
 ]
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
