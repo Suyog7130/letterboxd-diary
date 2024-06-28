@@ -102,26 +102,6 @@ export default function diaryView(diaryList: Diary[], username: string): string 
                     </a>
                 </div>
 
-                <div>
-                    <div class="letterboxd-embed-tc-title">
-                        ${diary.film.title}
-                        <span class="letterboxd-embed-tc-year">
-                            ${diary.film.year}
-                        </span>
-                    </div>
-
-                    <div class="letterboxd-embed-tc-date">
-                        ${diary.isRewatch ? '&#9850;' : ''} ${dateString}
-                    </div>
-
-                    <div class="letterboxd-embed-tc-rating">
-                        ${diary.rating.text ?? ''}
-                    </div>
-
-                    ${review ? `
-                        <div class="letterboxd-embed-tc-review">${review}</div>
-                    ` : ''}
-                </div>
             </div>
         </div>
 
