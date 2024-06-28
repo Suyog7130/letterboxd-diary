@@ -82,6 +82,35 @@ export default function diaryView(diaryList: Diary[], username: string): string 
     }
 </style>
 
+<style type="text/css" media="screen">
+.imagecarousel {
+  position: relative;
+  height: 233px;
+  margin-bottom: 30px;
+  display: flex;
+  width: fit-content;
+  gap: 20px;
+}
+
+.imagecarousel img {
+  margin: 0px 0px;
+  box-shadow: 2px 2px 8px #8a8a8a;
+}
+
+.imagecarousel {
+  animation: bannermove 50s linear infinite;
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+</style>
+
 <div id="letterboxd-embed-tc">
     ${diaryList.map((diary, idx) => {
         const date = diary.date.watched ? new Date(diary.date.watched) : null;
@@ -94,6 +123,7 @@ export default function diaryView(diaryList: Diary[], username: string): string 
             : '';
 
         return html`
+        <div class="imagecarousel">
         <div class="letterboxd-embed-tc-diary-entry">
             <div class="letterboxd-embed-tc-content">
                 <div class="letterboxd-embed-tc-poster">
@@ -102,7 +132,8 @@ export default function diaryView(diaryList: Diary[], username: string): string 
                     </a>
                 </div>
             </div>
-        </div>   
+        </div> 
+        </div>
     `}).join('')}
 
 </div>
