@@ -123,16 +123,16 @@ export default function diaryView(diaryList: Diary[], username: string): string 
             : '';
 
         return html`
-        <div class="imagecarousel">
         <div class="letterboxd-embed-tc-diary-entry">
             <div class="letterboxd-embed-tc-content">
                 <div class="letterboxd-embed-tc-poster">
+                    <div class="imagecarousel">
                     <a href="${diary.uri}" target="_blank">
-                        <img src="${diary.film?.image?.medium ?? ''}" alt="${diary.film.title} poster">
+                        <img src="${diary.film?.image?.small ?? ''}" alt="${diary.film.title} poster">
                     </a>
+                    </div>
                 </div>
-            </div>
-        </div> 
+            </div> 
         </div>
     `}).join('')}
 
