@@ -20,6 +20,7 @@ export default function diaryView(diaryList: Diary[], username: string): string 
         gap: 0.5rem;
         width: 100%;
         font-size: 0.5rem;
+        text-align: center;
     }
 
     .letterboxd-embed-tc-diary-entry {
@@ -27,6 +28,7 @@ export default function diaryView(diaryList: Diary[], username: string): string 
         flex-direction: row;
         gap: 0.5rem;
         padding: 0 .25rem;
+        text-align: center;
     }
 
     .letterboxd-embed-tc-title {
@@ -128,7 +130,7 @@ export default function diaryView(diaryList: Diary[], username: string): string 
                 <div class="letterboxd-embed-tc-poster">
                     <div class="imagecarousel">
                     <a href="${diary.uri}" target="_blank">
-                        <img src="${diary.film?.image?.small ?? ''}" alt="${diary.film.title} poster">
+                        <img src="${diary.film?.image?.medium ?? ''}" alt="${diary.film.title} poster">
                     </a>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ import diaryView from "../../views/diary";
 
 import TEST_DATA from './test-diary.json';
 
-const DIARY_LIMIT = 7;
+const DIARY_LIMIT = 5;
 
 export async function getHtml(username: string, test: boolean): Promise<string> {
     const {diaryEntries, error} = await getDiaryEntries(username, test);
